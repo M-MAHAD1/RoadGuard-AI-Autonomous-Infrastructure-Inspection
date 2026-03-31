@@ -51,3 +51,16 @@ Road_Inspection_Project/
 ├── input.mp4         # Sample input video (Drone/Dashcam footage)
 ├── output_result.mp4      # Final processed video with bounding boxes & alerts
 └── README.md              # Project documentation
+## 💻 Getting Started
+Follow these steps to set up and run the project on your local machine (Windows/Mac/Linux).
+
+### Prerequisites
+Make sure you have **Python 3.8+** installed on your system.
+
+### Installation Steps
+1. Clone this repository or download the project folder.
+2. Open the folder in your preferred IDE (e.g., **VS Code**).
+3. Open the terminal inside your IDE and install the required dependencies:
+
+```bash
+pip install ultralytics opencv-python
