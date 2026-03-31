@@ -13,7 +13,6 @@
 - [Getting Started (Installation & Setup)](#-getting-started)
 - [How to Use](#-how-to-use)
 - [Model Training Details](#-model-training-details)
-- [Future Enhancements](#-future-enhancements)
 
 ---
 
@@ -41,16 +40,6 @@ By ingesting video feeds from drones or vehicle dashcams, this system uses a cus
 
 ---
 
-## 📁 Project Structure
-
-```text
-Road_Inspection_Project/
-│
-├── app.py                 # Core Python script for video processing & inference
-├── best.pt                # Custom-trained YOLOv8 weights (The AI "Brain")
-├── input.mp4         # Sample input video (Drone/Dashcam footage)
-├── output_result.mp4      # Final processed video with bounding boxes & alerts
-└── README.md              # Project documentation
 ## 💻 Getting Started
 Follow these steps to set up and run the project on your local machine (Windows/Mac/Linux).
 
@@ -62,5 +51,54 @@ Make sure you have **Python 3.8+** installed on your system.
 2. Open the folder in your preferred IDE (e.g., **VS Code**).
 3. Open the terminal inside your IDE and install the required dependencies:
 
-```bash
+bash
 pip install ultralytics opencv-python
+##📁 Project Structure
+Plaintext
+Road_Inspection_Project/
+│
+├── app.py                 # Core Python script for video processing & inference
+├── best.pt                # Custom-trained YOLOv8 weights (The AI "Brain")
+├── input.mp4              # Sample input video (Drone/Dashcam footage)
+├── output_result.mp4      # Final processed video with bounding boxes & alerts
+└── README.md              # Project documentation
+##🕹️ How to Use
+Place your target video in the main project folder and ensure it is named input.mp4 (or change the video_path variable inside app.py to match your video's name).
+
+Run the application from your terminal:
+
+Bash
+python app.py
+A live window will appear, showing the AI inspecting the road in real time.
+
+Controls: Press the Q key to stop the process at any time.
+
+Once the video finishes (or you press q), check your folder for the output_result.mp4 file to see the final saved results.
+
+##📊 Model Training Details
+The underlying object detection model was trained from scratch specifically for road damage.
+
+Architecture: YOLOv8 (Ultralytics)
+
+Training Environment: Google Colab (Tesla T4 GPU)
+
+Dataset: Roboflow Universe (road-damage-det)
+
+Epochs: 50
+
+Image Size: 640x640
+
+Data Augmentation: Applied random cropping, rotations, and brightness adjustments to simulate varying outdoor lighting and drone camera angles.
+---
+
+## 👨‍💻 Author & Contact
+
+**Muhammad Mahad** *Computer Vision & AI Enthusiast*
+
+If you have any questions, suggestions, or want to collaborate on this project, feel free to reach out:
+
+* 📧 **Email:** [muhammadmahad.cs@gmail.com]
+* 💼 **LinkedIn:** [https://www.linkedin.com/in/muhammadmahad-cs/]
+* 🐙 **GitHub:** [@YourGitHubUsername](https://github.com/M-MAHAD1)
+
+---
