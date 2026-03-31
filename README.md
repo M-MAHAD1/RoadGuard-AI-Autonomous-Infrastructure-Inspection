@@ -34,7 +34,7 @@ By ingesting video feeds from drones or vehicle dashcams, this system uses a cus
 ---
 
 ## 🧠 System Architecture
-1. **Data Ingestion:** Video footage (`test_video.mp4`) is loaded using OpenCV.
+1. **Data Ingestion:** Video footage (`input.mp4`) is loaded using OpenCV.
 2. **Inference Engine:** Each frame is passed through the custom YOLOv8 model (`best.pt`).
 3. **Logic & Annotation:** Bounding boxes are drawn around detected defects. A logic gate checks the defect count to assign a "Status" to the frame.
 4. **Output Generation:** The processed frame is displayed live and simultaneously written to an output video file (`output_result.mp4`).
@@ -48,6 +48,6 @@ Road_Inspection_Project/
 │
 ├── app.py                 # Core Python script for video processing & inference
 ├── best.pt                # Custom-trained YOLOv8 weights (The AI "Brain")
-├── test_video.mp4         # Sample input video (Drone/Dashcam footage)
+├── input.mp4         # Sample input video (Drone/Dashcam footage)
 ├── output_result.mp4      # Final processed video with bounding boxes & alerts
 └── README.md              # Project documentation
