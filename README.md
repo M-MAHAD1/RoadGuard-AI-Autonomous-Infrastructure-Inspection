@@ -53,6 +53,7 @@ Make sure you have **Python 3.8+** installed on your system.
 
 bash
 pip install ultralytics opencv-python
+---
 ##📁 Project Structure
 Plaintext
 Road_Inspection_Project/
@@ -62,6 +63,7 @@ Road_Inspection_Project/
 ├── input.mp4              # Sample input video (Drone/Dashcam footage)
 ├── output_result.mp4      # Final processed video with bounding boxes & alerts
 └── README.md              # Project documentation
+---
 ##🕹️ How to Use
 Place your target video in the main project folder and ensure it is named input.mp4 (or change the video_path variable inside app.py to match your video's name).
 
